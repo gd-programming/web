@@ -1,3 +1,3 @@
-# `gd.docs`
+# `web`
 
 *Documentation for Geometry Dash.*
