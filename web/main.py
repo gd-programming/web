@@ -4,7 +4,7 @@ from sys import exit
 from typing import Sequence
 
 import click
-from aiohttp.web import Application
+from aiohttp.web import Application, run_app
 
 from web.constants import (
     DEFAULT_HOST,
@@ -14,7 +14,7 @@ from web.constants import (
     DEFAULT_PORT,
     ROOT,
 )
-from web.core import run_app, setup_app
+from web.core import setup_app
 
 EXECUTE = "npx"
 TAILWIND = "tailwindcss"
