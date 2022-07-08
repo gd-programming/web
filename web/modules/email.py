@@ -1,6 +1,6 @@
 from aiohttp.web import HTTPFound, Request, Response
 
-from web.constants import EMAIL_TO, EMAIL, DOMAIN
+from web.constants import DOMAIN, EMAIL, EMAIL_TO
 from web.core import routes
 from web.utils import identifier
 

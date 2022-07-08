@@ -3,11 +3,16 @@ from subprocess import call
 from sys import exit
 from typing import Sequence
 
-from aiohttp.web import Application
 import click
+from aiohttp.web import Application
 
 from web.constants import (
-    DEFAULT_HOST, DEFAULT_INPUT, DEFAULT_NAME, DEFAULT_OUTPUT, DEFAULT_PORT, ROOT
+    DEFAULT_HOST,
+    DEFAULT_INPUT,
+    DEFAULT_NAME,
+    DEFAULT_OUTPUT,
+    DEFAULT_PORT,
+    ROOT,
 )
 from web.core import run_app, setup_app
 
@@ -57,6 +62,4 @@ def create_and_run_app(host: str, port: int) -> None:
 @click.option("--watch", "-w", is_flag=True, default=False)
 @web.command()
 def build(input: Path, output: Path, watch: bool) -> None:
-    exit(
-        call(build_command(input, output, watch=watch), cwd=ROOT.as_posix(), shell=True)
-    )
+    exit(call(build_command(input, output, watch=watch), cwd=ROOT.as_posix(), shell=True))
